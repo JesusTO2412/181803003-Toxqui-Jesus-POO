@@ -32,15 +32,16 @@
             <h2>Los registros de la base de datos son:</h2><br>
             <table class="table table-hover">
                 <thead class="thead-dark">
-                    <tr>
-                        <td colspan="2"><h2>Usuarios</h2></td>
-                        <td colspan="1"><a class="btn btn-success btn-lg" href="formularioUsuario.jsp">Agregar usuario</a></td>
+                    <tr class="text-center">
+                        <td colspan="4"><h2>Usuarios</h2></td>
+                        <td colspan="2"><a class="btn btn-success btn-lg" href="formularioUsuario.jsp">Agregar usuario</a></td>
                     </tr>
-                    <tr>
+                    <tr class="text-center">
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Contraseña</th>
-                        </tr>
+                        <th colspan="3">Acciones</th>
+                    </tr>
                     </thead>
                 <tbody>
                 <%while(rs.next()){%>
@@ -48,6 +49,9 @@
                         <th><%=rs.getInt("id_usuario")%></th>
                         <td><%=rs.getString("usuario")%></td>
                         <td><%=rs.getString("password")%></td>
+                        <td><a class="btn btn-warning" href="formularioUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Editar Usuario</a></td>
+                        <td><a class="btn btn-warning" href="formularioPassUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Editar contraseña</a></td>
+                        <td><a class="btn btn-danger" href="">Eliminar Usuario</a></td>
                     </tr>  
                 <%}%>
                 </tbody>

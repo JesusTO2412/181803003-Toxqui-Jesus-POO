@@ -4,8 +4,43 @@
     Author     : Jesus
 --%>
 
+<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%  
+    int id;
+    String titulo="Agregar Usuario";
+    String iduser="";
+    String user="";
+    String action = "agregarUsuario.jsp";
+    Connection conexion = null;
+    PreparedStatement stmt = null;
+    ResultSet rs = null;
+    
+    if(request.getParameter("id")!=null){
+        id = Integer.parseInt(request.getParameter("id"));
+        titulo="Editar Usuario";
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios ?serverTimezone=UTC","root","");
+            stmt = conexion.prepareStatement("SELECT id_usuario, usuario, password FROM usuario WHERE id_usuario=?");
+            stmt.setInt(1, id);
+            rs=stmt.executeQuery(); 
+            
+            rs.next();
+            iduser = rs.getString("id_usuario");
+            user = rs.getString("usuario");
+            action = "editarUsuario.jsp";
+             
+            
+        }catch(SQLException e){
+            out.println("Error: "+e.getMessage());
+        }      
+    }else {
+        id=0;
+    }
+    
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,19 +51,24 @@
     <body>
         <div class="container">
             <div class="form-group">             
-                <form class="form-signin" action="agregarUsuario.jsp" method="POST">
+                <form class="form-signin" action="<%=action%>" method="GET">
+                    <%if(request.getParameter("id")!=null){%>
+                        <input type="hidden" name="idUsuario" value="<%=id%>" />  
+                    <%}%>
                     <div class="text-center mb-4">
                         <img class="mb-4 rounded-circle" src="user.png" alt="" width="150">
-                        <h1 class="h3 mb-3 font-weight-normal">Agregar<br> Nuevo Usuario</h1><br>  
+                        <h1 class="h3 mb-3 font-weight-normal"><%=titulo%></h1><br>  
                     </div>
                     <div class="form-label-group">
-                        <input type="text" name="usuario" class="form-control" required/>  
+                        <input type="text" name="usuario" value="<%=user%>" class="form-control" placeholder="Nombre Usuario" required/>  
                         <label>Nombre de Usuario</label>
                     </div>
+                    <%if(request.getParameter("id")==null){%>
                     <div class="form-label-group">
-                        <input type="password" name="pass" class="form-control" required/> 
+                        <input type="password" name="pass" class="form-control" required placeholder="contraseña"/> 
                         <label>contraseña</label>
                     </div>
+                    <%}%>
                     <br><input type="submit" value="Enviar" class="btn btn-success btn-block"/>
                     <input type="reset" value="Limpiar" class="btn btn-outline-success btn-block"/>
                 </form>
