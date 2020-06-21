@@ -9,9 +9,10 @@
 <!DOCTYPE html>
 <%  
     int id;
-    String titulo="Agregar Usuario";
     String iduser="";
     String user="";
+    String years="";
+    String titulo="Agregar Usuario";
     String action = "agregarUsuario.jsp";
     Connection conexion = null;
     PreparedStatement stmt = null;
@@ -23,13 +24,14 @@
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios ?serverTimezone=UTC","root","");
-            stmt = conexion.prepareStatement("SELECT id_usuario, usuario, password FROM usuario WHERE id_usuario=?");
+            stmt = conexion.prepareStatement("SELECT * FROM usuario WHERE id_usuario=?");
             stmt.setInt(1, id);
             rs=stmt.executeQuery(); 
             
             rs.next();
             iduser = rs.getString("id_usuario");
             user = rs.getString("usuario");
+            years = rs.getString("edad");
             action = "editarUsuario.jsp";
              
             
@@ -62,6 +64,10 @@
                     <div class="form-label-group">
                         <input type="text" name="usuario" value="<%=user%>" class="form-control" placeholder="Nombre Usuario" required/>  
                         <label>Nombre de Usuario</label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="number" name="edad" value="<%=years%>" class="form-control" placeholder="Edad" required/>  
+                        <label>Edad del Usuario</label>
                     </div>
                     <%if(request.getParameter("id")==null){%>
                     <div class="form-label-group">

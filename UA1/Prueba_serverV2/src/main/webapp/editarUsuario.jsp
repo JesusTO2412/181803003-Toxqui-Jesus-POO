@@ -15,9 +15,10 @@
     try{
         Class.forName("com.mysql.jdbc.Driver");
         conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios ?serverTimezone=UTC","root","");
-        stmt = conexion.prepareStatement("UPDATE usuario SET usuario=? WHERE id_usuario=?");
+        stmt = conexion.prepareStatement("UPDATE usuario SET usuario=?, edad=? WHERE id_usuario=?");
         stmt.setString(1, request.getParameter("usuario"));
-        stmt.setInt(2, Integer.parseInt(request.getParameter("idUsuario")));
+        stmt.setString(2, request.getParameter("edad"));
+        stmt.setInt(3, Integer.parseInt(request.getParameter("idUsuario")));
         stmt.executeUpdate();   
 %>
 <html>

@@ -16,9 +16,10 @@
         Class.forName("com.mysql.jdbc.Driver");
         conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios ?serverTimezone=UTC","root","");
         //stmt = conexion.prepareStatement("INSERT INTO usuario (usuario,password) VALUES(?,?)");
-        stmt = conexion.prepareStatement("INSERT INTO usuario SET usuario=?, password=md5(?)");
+        stmt = conexion.prepareStatement("INSERT INTO usuario SET usuario=?, password=md5(?), edad=?");
         stmt.setString(1, request.getParameter("usuario"));
         stmt.setString(2, request.getParameter("pass"));
+        stmt.setString(3, request.getParameter("edad"));
         stmt.executeUpdate();   
 %>
 <html>
