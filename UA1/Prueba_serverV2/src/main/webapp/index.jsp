@@ -33,7 +33,7 @@
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr class="text-center">
-                        <td colspan="5"><h2>Usuarios</h2></td>
+                        <td colspan="6"><h2>Usuarios</h2></td>
                         <td colspan="2"><a class="btn btn-success btn-lg" href="formularioUsuario.jsp">Agregar usuario</a></td>
                     </tr>
                     <tr class="text-center">
@@ -41,7 +41,7 @@
                         <th>Nombre</th>
                         <th>Contraseña</th>
                         <th>edad</th>
-                        <th colspan="3">Acciones</th>
+                        <th colspan="4">Acciones</th>
                     </tr>
                     </thead>
                 <tbody>
@@ -51,9 +51,10 @@
                         <td><%=rs.getString("usuario")%></td>
                         <td><%=rs.getString("password")%></td>
                         <td><%=rs.getString("edad")%></td>
-                        <td><a class="btn btn-warning" href="formularioUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Editar Usuario</a></td>
-                        <td><a class="btn btn-warning" href="formularioPassUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Editar contraseña</a></td>
-                        <td><a class="btn btn-danger" href="eliminarUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Eliminar Usuario</a></td>
+                        <td><a class="btn btn-warning btn-sm" href="formularioUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Editar Usuario</a></td>
+                        <td><a class="btn btn-warning btn-sm" href="formularioPassUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Editar contraseña</a></td>
+                        <td><a class="btn btn-danger btn-sm" href="eliminarUsuario.jsp?id=<%=rs.getInt("id_usuario")%>">Eliminar Usuario</a></td>
+                        <td><a class="btn btn-danger btn-sm" href="eliminarUsuarioV2.jsp?id=<%=rs.getInt("id_usuario")%>">Eliminar Usuario v2</a></td>
                     </tr>  
                 <%}%>
                 </tbody>

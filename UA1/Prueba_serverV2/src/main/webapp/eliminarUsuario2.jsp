@@ -31,18 +31,12 @@
                 out.print("<div class='alert alert-success' role='alert'>");
                     out.println("Usuario Eliminado con exito");
                 out.print("</div> "); 
-            %>
-
+            }catch(SQLException e){%>    
+                <div class="alert alert-danger" role="alert">
+                    <%out.println("Error: "+e.getMessage());%>
+                </div>  
+            <%}%>
             <a href="index.jsp" type="button" class="btn btn-success btn-lg">Volver al Index</a>
         </div>
     </body>
-</html>
-<%}catch(SQLException e){%>    
-    <div class="alert alert-danger" role="alert">
-        <%out.println("Error: "+e.getMessage());%>
-    </div>  
-<%}%>
-
-
-
-        
+</html>  

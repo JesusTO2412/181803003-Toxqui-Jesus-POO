@@ -33,13 +33,14 @@
             <div class="alert alert-success" role="alert">
                 Se agrego el registro exitosamente a la base de datos!
             </div>
+            <%}catch(SQLException e){%>    
+                <div class="alert alert-danger" role="alert">
+                    <%out.println("Error: "+e.getMessage());%>
+                </div>  
+            <%}%>
             <a href="index.jsp" type="button" class="btn btn-success btn-lg">Volver al Index</a>
             <a href="formularioUsuario.jsp" type="button" class="btn btn-secondary btn-lg">Agregar nuevo usuario</a>
         </div>
     </body>
 </html>
-<%}catch(SQLException e){%>    
-    <div class="alert alert-danger" role="alert">
-        <%out.println("Error: "+e.getMessage());%>
-    </div>  
-<%}%>
+

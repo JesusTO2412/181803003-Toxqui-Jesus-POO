@@ -28,7 +28,7 @@
         if(rs.next()){
         
             if(request.getParameter("newPass").equals(request.getParameter("newPass2"))){
-                stmt = conexion.prepareStatement("UPDATE usuario SET password=md5(?) WHERE id_usuario=?");
+                stmt = conexion.prepareStatement("UPDATE usuario SET password=md5(?) WHERE id_usuario=1000");
                 stmt.setString(1, request.getParameter("newPass"));
                 stmt.setInt(2, Integer.parseInt(request.getParameter("idUsuario")));
                 stmt.executeUpdate();   
@@ -59,15 +59,15 @@
                 out.print("<div class='alert alert-success' role='alert'>");
                     out.println(Error);
                 out.print("</div> ");
-             }%>
+             }
+            }catch(SQLException e){%>    
+                <div class="alert alert-danger" role="alert">
+                    <%out.println("Error: "+e.getMessage());%>
+                </div>  
+            <%}finally{%>
             <a href="index.jsp" type="button" class="btn btn-success btn-lg">Volver al Index</a>
             <a href="formularioPassUsuario.jsp?id=<%=request.getParameter("idUsuario")%>" type="button" class="btn btn-secondary btn-lg">Intentar nuevamente</a>
+            <%}%>
         </div>
     </body>
 </html>
-
-<%}catch(SQLException e){%>    
-    <div class="alert alert-danger" role="alert">
-        <%out.println("Error: "+e.getMessage());%>
-    </div>  
-<%}%>

@@ -32,16 +32,16 @@
                 out.print("<div class='alert alert-danger' role='alert'>");
                     out.println("¿Estas seguro de eliminar a "+rs.getString("usuario")+"?");
                 out.print("</div> "); 
-            %>
+            }catch(SQLException e){%>    
+                <div class="alert alert-danger" role="alert">
+                    <%out.println("Error: "+e.getMessage());%>
+                </div>  
+            <%}%>
 
             <a href="index.jsp" type="button" class="btn btn-success btn-lg">Cancelar</a>
             <a href="eliminarUsuario2.jsp?id=<%=rs.getInt("id_usuario")%>" type="button" class="btn btn-warning btn-lg">Eliminar</a>
         </div>
     </body>
 </html>
-<%}catch(SQLException e){%>    
-    <div class="alert alert-danger" role="alert">
-        <%out.println("Error: "+e.getMessage());%>
-    </div>  
-<%}%>
+
 

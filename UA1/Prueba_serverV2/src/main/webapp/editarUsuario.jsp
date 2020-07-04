@@ -29,6 +29,11 @@
     </head>
     <body>
         <div class="container text-center"><br>
+            <%}catch(SQLException e){%>    
+                <div class="alert alert-danger" role="alert">
+                    <%out.println("Error: "+e.getMessage());%>
+                </div>  
+            <%}%>
             <div class="alert alert-success" role="alert">
                 Se edito el registro exitosamente a la base de datos!
             </div>
@@ -37,8 +42,4 @@
         </div>
     </body>
 </html>
-<%}catch(SQLException e){%>    
-    <div class="alert alert-danger" role="alert">
-        <%out.println("Error: "+e.getMessage());%>
-    </div>  
-<%}%>
+
