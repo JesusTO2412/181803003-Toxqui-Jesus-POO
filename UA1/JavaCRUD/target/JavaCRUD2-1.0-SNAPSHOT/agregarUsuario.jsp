@@ -1,12 +1,3 @@
-<%-- 
-    Document   : agregarUsuario
-    Created on : 12 jun. 2020, 9:17:19
-    Author     : Jesus
---%>
-
-<%@page import="Dao.Usuario"%>
-<%@page import="java.sql.*"%>
-<%@page import="Conf.Conexion"%>
 <%@page import="Dao.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

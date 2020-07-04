@@ -23,6 +23,12 @@ public class Usuario {
         this.edad = edad;
     }
 
+    public Usuario(int id_usuario, String usuario, int edad) {
+        this.id_usuario = id_usuario;
+        this.usuario = usuario;
+        this.edad = edad;
+    }
+
     public Usuario(int id_usuario, String password) {
         this.id_usuario = id_usuario;
         this.password = password;

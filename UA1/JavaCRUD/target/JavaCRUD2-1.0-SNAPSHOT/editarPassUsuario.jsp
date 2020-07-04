@@ -1,9 +1,3 @@
-
-<%-- 
-    Document   : editarPassUsuario
-    Created on : 19 jun. 2020, 11:44:54
-    Author     : Jesus
---%>
 <%@page import="Dao.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,8 +20,6 @@
         ExistError=true;
         Error="La contraseña no coincide con la del usuario";
     }
-   
-
 %>
 <html>
     <head>
