@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>HTML - Jesus Toxqui Ortega</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/style.css">
+    <link rel="Shortcut Icon" type="image/x-icon" href="imagenes/logouppicon.ico">
+    <meta charset="utf-8">
+</head>
+<body>
+<section class="header">
+    <img src="imagenes/logoupp.png" alt="logo de la uppue" width="150px">
+    <section class="tituloP">
+        <h2>Universidad Politecnica de Puebla</h2>
+        <br><h3>Curso de HTML Básico para Java Web</h3>
+    </section>
+</section>
+<header>
+    <nav>
+        <a href="" class="btn-menu">Inicio</a>
+        <a href="" class="btn-menu">Presentacion</a>
+        <a href="" class="btn-menu" >UPPue</a>
+        <a href="" class="btn-menu">Contacto</a>
+    </nav>	
+</header>
+<section class="wrap">
+    <aside>
+        <img src="imagenes/imghtml.png" alt="" width="100%">
+        <br><br><h2>Enlaces de Interes</h2><br>
+        <div class="menu">				
+            <ul>
+                <li><a href="https://www.w3schools.com/html/default.asp">W3schools.com</a></li>
+                <li><a href="https://developer.mozilla.org/es/docs/HTML/HTML5">HTML5 en Mozilla</a></li>
+                <li><a href="#">Proyecto en GitHub</a></li>
+                <li><a href="#">Acerca del Desarrollador</a></li>
+            </ul>
+        </div>
+    </aside>
+    <section class="articles">
+    <h2 class="encabezado" itemprop="name">HyperText Markup Languaje</h2>
+        <article>
+            <h2>1. ¿Qué significan las siglas HTML?</h2>
+            <p>HyperText Markup Languaje (Lenguaje de marcado de hipertexto) es el lenguaje de marcado estándar para crear páginas web.</p><br>
+            <ul>
+                <li>HTML describe la estructura de una página web</li>
+                <li>Los elementos HTML le dicen al navegador cómo mostrar el contenido</li>
+                <li>Los elementos HTML están representados por etiquetas</li>
+                <li>Las etiquetas HTML etiquetan piezas de contenido como "encabezado", "párrafo", "tabla", etc.</li>
+                <li>Los navegadores no muestran las etiquetas HTML, pero las usan para representar el contenido de la página</li>       
+            </ul><br>
+            <img src="imagenes/ejemploHTML.jpg" class="img_article" alt=""><br>
+        </article>
+        <article>
+            <h2>2. Las partes de las etiquetas de HTML</h2>
+            <p>Las etiquetas HTML son nombres de elementos rodeados de corchetes angulares:</p><br>
+            <img src="imagenes/ejemploEtiqueta.jpg" class="img_article" alt=""><br>
+            <ul>
+                <li>Las etiquetas HTML normalmente vienen en pares como por ejemplo <span class="etiquetas">&lt;p&gt;Esta es una etiqueta de parrafo&lt;/p&gt;</span></li>
+                <li>La primera etiqueta en un par es la etiqueta de inicio, la segunda etiqueta es la etiqueta final</li>
+                <li>La etiqueta final se escribe como la etiqueta inicial, pero con una barra diagonal insertada antes del nombre de la etiqueta</li>
+            </ul><br>
+            <h2>Atributos en HTML</h2>
+            <p>Un atributo HTML proporciona información adicional sobre un elemento HTML.</p><br>
+            <ul>
+                <li>Todos los elementos HTML pueden tener atributos</li>
+                <li>Los atributos proporcionan información adicional sobre un elemento</li>
+                <li>Los atributos siempre se especifican en la etiqueta de inicio</li>
+                <li>Los atributos generalmente vienen en pares nombre / valor como: nombre = "valor"</li>
+            </ul><br>
+            <p>A continuación se muestran unos ejemplos:</p><br>
+            <img src="imagenes/ejemploAtributos.jpg" class="img_article" alt=""><br>
+        </article>
+        <article>
+            <h2>3. ¿Cómo escribir un párrafo en HTML?</h2>
+            <p>Un párrafo siempre comienza en una nueva línea, y generalmente es un bloque de texto. El <span class="etiquetas">&lt;p&gt;</span> elemento HTML define un párrafo. 
+                Un párrafo siempre comienza en una nueva línea, y los navegadores agregan automáticamente un espacio en blanco (un margen) antes y después de un párrafo.
+            <br>Ejemplos de cómo escribir un párrafo en HTML:
+            </p><br>
+            <img src="imagenes/ejemploParrafo.jpg" class="img_article" alt=""><br>
+        </article>
+        <article>
+            <h2>4. ¿Cómo agregar estilos y formato al texto en HTML?</h2>
+            <p>El <i>style</i> atributo HTML se usa para agregar estilos a un elemento, como color, fuente, tamaño y más.
+                La configuración del estilo de un elemento HTML se puede hacer con el <i>style</i> atributo
+                <br>El <i>style</i> atributo HTML tiene la siguiente sintaxis:
+            </p>
+            <img src="imagenes/ejemploStyle.jpg" class="img_article" alt=""><br>
+            <p>
+              La propiedad de "color" en CSS define el color del texto para un elemento HTML:  
+            </p><br>
+            <h1 style="color:blue;">Texto con propiedad color</h1>
+            <p>
+              La propiedad font-family de CSS define la fuente que se utilizará para un elemento HTML:  
+            </p><br>
+            <h1 style="font-family:verdana;">Texto con tipografia</h1>
+            <p>
+              La propiedad font-size de CSS define el tamaño del texto para un elemento HTML:  
+            </p><br>
+            <h1 style="font-size:300%;">Texto con otro tamaño</h1>
+            <p>
+              La propiedad text-align CSS define la alineación horizontal del texto para un elemento HTML: 
+            </p><br>
+            <h1 style="text-align:center;">Texto centrado</h1>
+            <br><img src="imagenes/ejemploStyle2.jpg" class="img_article" alt=""><br> 
+        </article>
+        <article>
+            <h2>5. ¿Cómo colocar una imagen en HTML?</h2>
+            <p>En HTML, las imágenes se definen con la etiqueta <span class="etiquetas">&lt;img&gt;</span>.
+            La etiqueta <span class="etiquetas">&lt;img&gt;</span> está vacía, contiene solo atributos y no tiene una etiqueta de cierre.
+            El src atributo especifica la URL (dirección web) de la imagen:
+            </p><br>
+            <center><img src="imagenes/imghtml.png" alt="imagen del Logo HTML5" style="width: 300px;" class="img_article"></center><br>
+            <img src="imagenes/ejemploImagen.jpg" alt="" class="img_article">
+        </article>
+        <article>
+            <h2>6. ¿Cómo colocar un hipervínculo en HTML?</h2>
+            <p>Los enlaces HTML son hipervínculos.
+            Puede hacer clic en un enlace y saltar a otro documento.
+            Cuando mueves el mouse sobre un enlace, la flecha del mouse se convertirá en una pequeña mano.
+            Los hipervínculos se definen con la etiqueta <span class="etiquetas">&lt;a&gt;</span> de HTML :
+            </p><br>
+            <img src="imagenes/ejemploEnlace1.jpg" alt="" class="img_article"><br>
+            <a href="https://www.w3schools.com/html">Visit our HTML tutorial</a><br><br>
+            <img src="imagenes/ejemploEnlace2.jpg" alt="" class="img_article"><br>
+        </article>
+        <article>
+            <h2>6. ¿Cómo colocar un hipervínculo en HTML?</h2>
+            <p>Los enlaces HTML son hipervínculos.
+            Puede hacer clic en un enlace y saltar a otro documento.
+            Cuando mueves el mouse sobre un enlace, la flecha del mouse se convertirá en una pequeña mano.
+            Los hipervínculos se definen con la etiqueta <span class="etiquetas">&lt;a&gt;</span> de HTML :
+            </p><br>
+            <img src="imagenes/ejemploEnlace1.jpg" alt="" class="img_article"><br>
+            <a href="https://www.w3schools.com/html">Visit our HTML tutorial</a><br><br>
+            <img src="imagenes/ejemploEnlace2.jpg" alt="" class="img_article"><br>
+        </article>
+        <article>
+            <h2>7. ¿Cómo hacer una tabla en HTML</h2>
+            <p>Una tabla HTML se define con la etiqueta <span class="etiquetas">&lt;table&gt;</span>.
+            Cada fila de la tabla se define con la etiqueta <span class="etiquetas">&lt;tr&gt;</span>. 
+            Un encabezado de tabla se define con la etiqueta <span class="etiquetas">&lt;th&gt;</span>. 
+            Por defecto, los encabezados de las tablas están en negrita y centrados. Una tabla de datos / celda se define con la etiqueta <span class="etiquetas">&lt;td&gt;</span>.
+            Ademas, la etiqueta <span class="etiquetas">&lt;td&gt;</span> Pueden contener todo tipo de elementos HTML; texto, imágenes, listas, otras tablas, etc.
+            </p><br>
+            <ul>
+                <li>Usar el elemento <span class="etiquetas">&lt;table&gt;</span> de HTML para definir una tabla</li>
+                <li>Usar el elemento <span class="etiquetas">&lt;tr&gt;</span> de HTML para definir una fila de la tabla</li>
+                <li>Usar el elemento <span class="etiquetas">&lt;tr&gt;</span> de HTML para definir los datos de una tabla.</li>
+                <li>Usar el elemento <span class="etiquetas">&lt;th&gt;</span> de HTML para definir un encabezado de tabla</li>
+                <li>Usar el elemento <span class="etiquetas">&lt;caption&gt;</span> de HTML para definir un título de tabla</li>
+                <li>Usar el elemento <span class="etiquetas">border</span> propiedad CSS para definir un borde</li>
+                <li>Usar el elemento <span class="etiquetas">border-collapse</span> propiedad CSS para contraer los bordes de las celdas</li>
+                <li>Usar el elemento <span class="etiquetas">padding</span> propiedad CSS para agregar relleno a las celdas</li>
+                <li>Usar el elemento <span class="etiquetas">text-align</span> propiedad CSS para alinear el texto de la celda</li>
+                <li>Usar el elemento <span class="etiquetas">border-spacing</span> propiedad CSS para establecer el espacio entre celdas</li>
+                <li>Usar el elemento <span class="etiquetas">colspan</span> atributo para hacer que una celda abarque muchas columnas</li>
+                <li>Usar el elemento <span class="etiquetas">rowspan</span> atributo para hacer que una celda abarque muchas filas</li>
+                <li>Usar el elemento <span class="etiquetas">id</span> atributo para definir de forma exclusiva una tabla</li> 
+            </ul>
+            
+            <table id="tabla1">
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th> 
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+              </tr>
+            </table>
+            <img src="imagenes/ejemploTabla.jpg" alt="" class="img_article"><br>
+            <img src="imagenes/ejemploTablaEstilos.jpg" alt="" class="img_article"><br>
+        </article>
+        <article>
+            <h2>8. ¿Cómo hacer una lista en HTML</h2><br>
+            <h3>Lista Desordenada</h3>
+            <p>Una lista desordenada comienza con la etiqueta <span class="etiquetas">&lt;ul&gt;</span>. Cada elemento de la lista comienza con la etiqueta. <span class="etiquetas">&lt;li&gt;</span>
+            Los elementos de la lista se marcarán con viñetas (pequeños círculos negros) de forma predeterminada:
+            </p><br>
+            <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul><br>
+            <img src="imagenes/ejemploListaD.jpg" alt="" class="img_article"><br>
+            <h3>Lista Ordenada</h3>
+            <p>Una lista desordenada comienza con la etiqueta <span class="etiquetas">&lt;ol&gt;</span>. Cada elemento de la lista comienza con la etiqueta. <span class="etiquetas">&lt;li&gt;</span>
+            Los elementos de la lista se marcarán con viñetas (pequeños círculos negros) de forma predeterminada:
+            </p><br>
+            <ol>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol><br>
+            <img src="imagenes/ejemploListaO.jpg" alt="" class="img_article"><br>
+            <h3>Lista de Descripcion</h3>
+            <p>HTML también admite listas de descripción. Una lista de descripción es una lista de términos, con una descripción de cada término.
+               La etiqueta <span class="etiquetas">&lt;dl&gt;</span> define la lista de descripción, la etiqueta <span class="etiquetas">&lt;dt&gt;</span> define el término (nombre) y la etiqueta <span class="etiquetas">&lt;dd&gt;</span> describe cada término.          
+            </p><br>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+            </dl><br>
+            <img src="imagenes/ejemploListaDesc.jpg" alt="" class="img_article"><br>
+        </article>
+        <article>
+            <h2>9.¿Cómo colocar bloques en HTML y para que sirven?</h2>
+            <p>Cada elemento HTML tiene un valor de visualización predeterminado, según el tipo de elemento que sea.
+                Los dos valores de visualización son: bloque e inline.</p><br>
+            <h3>Elementos a nivel de Bloque</h3>
+            <p> Un elemento de nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como sea posible).
+            </p><br>
+            <img src="imagenes/ejemploBloques.jpg" alt="" class="img_article"><br>
+            <p>Ejemplo de bloque div</p><br>
+            <div style="background-color:black;color:white;padding:20px;">
+                <h2>London</h2>
+                <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p><br>
+            </div><br>
+            <img src="imagenes/ejemploBloques1.jpg" alt="" class="img_article"><br>
+            <h3>Elementos en Linea</h3>
+            <p> Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho que sea necesario.
+            </p><br>
+            <img src="imagenes/ejemploEnLinea.jpg" alt="" class="img_article"><br>
+            <h1>My <span style="background-color:black;color:white;padding:20px;">Important</span> Heading</h1>                            
+        </article>
+         <article>
+            <h2>10. ¿Cómo crear un formulario en HTML?</h2>
+            <p>Se utiliza un formulario HTML para recopilar la entrada del usuario. La entrada del usuario se puede enviar a un servidor para su procesamiento.
+            Un formulario HTML contiene elementos de formulario.
+            Los elementos de formulario son diferentes tipos de elementos de entrada, como: campos de texto, casillas de verificación, botones de opción, botones de envío y más.
+            El elemento <span class="etiquetas">&lt;input&gt;</span> es el elemento de forma más importante.
+            El elemento <span class="etiquetas">&lt;input&gt;</span> se muestra de varias maneras, según el atributo de tipo.<br>
+            Acontinuacion se muestran la forma mas basica de crear un formulario:
+            </p><br>
+            
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>Datos del estudiante</legend>
+                    <label for="fname">Nombre del estudiante:</label><br>
+                    <input type="text" id="fname" name="fname" value="Jesus"><br>
+                    <label for="subject">Materia:</label><br>
+                    <input type="text" id="lname" name="lname" value="Programacion Orientada a Objetos"><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form><br>
+            <img src="imagenes/ejemploForm.jpg" alt="" class="img_article"><br>
+            
+            <h2>Los principales atributos de un input son:</h2><br>
+            <h3>El atributo de tipo</h3>
+            <p>El atributo de entrada <span class="etiquetas">type="tipo_de_entrada"</span> especifica el tipo de dato que se ingresa a un campo de entrada.</p><br>
+            <h3>El atributo de identificacion</h3>
+            <p>El atributo de entrada <span class="etiquetas">id="Valor_del_id"</span> especifica identificador para un campo de entrada.</p><br>
+            <h3>El atributo de nombre</h3>
+            <p>El atributo de entrada <span class="etiquetas">name="nombre_del_atributo"</span> especifica un nombre para un campo de entrada.</p><br>
+            <h3>El atributo de valor</h3>
+            <p>El atributo de entrada <span class="etiquetas">value="Valor_del_atributo"</span> atributo de entrada especifica un valor inicial para un campo de entrada.</p><br>
+            <h3>El atributo de solo lectura</h3>
+            <p>El atributo de entrada <span class="etiquetas">readonly</span> especifica que un campo de entrada es de solo lectura.</p><br>
+            <h3>El atributo deshabilitado</h3>
+            <p>El atributo de entrada <span class="etiquetas">disabled</span> especifica que se debe deshabilitar un campo de entrada.</p><br>
+            <h3>El atributo de tamaño</h3>
+            <p>El atributo de entrada <span class="etiquetas">size</span> especifica el ancho visible, en caracteres, de un campo de entrada.</p><br>
+            <h3>El atributo maxlength</h3>
+            <p>El atributo de entrada <span class="etiquetas">maxlength</span> especifica la cantidad máxima de caracteres permitidos en un campo de entrada.</p><br>
+            <h3>Los atributos min y max</h3>
+            <p>El atributo de entrada <span class="etiquetas">min</span> y <span class="etiquetas">max</span>especifican los valores mínimo y máximo para un campo de entrada.</p><br>
+            <h3>El atributo múltiple</h3>
+            <p>El atributo de entrada <span class="etiquetas">mutiple</span> especifica que el usuario puede ingresar más de un valor en un campo de entrada.</p><br>
+            <h3>El atributo del patrón</h3>
+            <p>El atributo de entrada <span class="etiquetas">pattern</span> especifica una expresión regular con la que se verifica el valor del campo de entrada cuando se envía el formulario.</p><br>
+            <h3>El atributo de marcador de posición</h3>
+            <p>El atributo de entrada <span class="etiquetas">placeholder</span> especifica una pista breve que describe el valor esperado de un campo de entrada (un valor de muestra o una breve descripción del formato esperado).</p><br>
+            <h3>El atributo requerido</h3>
+            <p>El atributo de entrada <span class="etiquetas">required</span> especifica que se debe completar un campo de entrada antes de enviar el formulario.</p><br>
+            <h3>El atributo de paso</h3>
+            <p>El atributo de entrada <span class="etiquetas">step</span> especifica los intervalos de números legales para un campo de entrada. Ejemplo: si step = "3", los números legales podrían ser -3, 0, 3, 6, etc.</p><br>
+            <h3>El atributo de enfoque automático</h3>
+            <p>El atributo de entrada <span class="etiquetas">autofocus</span> entrada especifica que un campo de entrada debería enfocarse automáticamente cuando se carga la página.</p><br>
+                        
+        </article>
+        <article>
+            <h2>11.¿Cuales son todos los elementos de un formulario?</h2>
+            <p>Uno de los elementos de forma más utilizados es el <span class="etiquetas">&lt;input&gt;</span> elemento.
+                El <span class="etiquetas">&lt;input&gt;</span> elemento se puede mostrar de varias formas, según el type atributo.</p><br>
+            <h3>Label</h3>
+            <p> El Elemento HTML <span class="etiquetas">&lt;label&gt;</span> representa una etiqueta para un elemento en una interfaz de usuario. 
+                Este puede estar asociado con un control ya sea mediante la utilizacion del atributo <span class="etiquetas">for</span>, o ubicando el control dentro del elemento <span class="etiquetas">&lt;label&gt;</span>.
+            </p><br>
+            <h3>Input</h3>
+            <p>La etiqueta <span class="etiquetas">&lt;input&gt;</span> especifica un campo de entrada donde el usuario puede ingresar datos.
+               Es el elemento de forma más importante. Ademas, se puede mostrar de varias maneras, dependiendo del atributo de tipo.
+                Los diferentes tipos de entrada son los siguientes:
+            </p><br>
+            <form>
+                <label for="">Boton</label><br><br>
+                <input type="button" value="boton"><br><br><hr>
+                <label for="">checkbox</label><br><br>
+                <input type="checkbox"><br><br><hr>
+                <label for="">Color</label><br><br>
+                <input type="color"><br><br><hr>
+                <label for="">Fecha</label><br><br>
+                <input type="date"><br><br><hr>
+                <label for="">Hora Local</label><br><br>
+                <input type="datetime-local"><br><br><hr>
+                <label for="">Correo</label><br><br>
+                <input type="email"><br><br><hr>
+                <label for="">Archivo</label><br><br>
+                <input type="file"><br><br><hr>
+                <label for="">Input Oculto</label><br><br>
+                <input type="hidden"><br><br><hr>
+                <label for="">Imagen</label><br><br>
+                <input type="image"><br><br><hr>
+                <label for="">Mes</label><br><br>
+                <input type="month"><br><br><hr>
+                <label for="">Numero</label><br><br>
+                <input type="number"><br><br><hr>
+                <label for="">Contraseña</label><br><br>
+                <input type="password"><br><br><hr>
+                <label for="">Radio</label><br><br>
+                <input type="radio"><br><br><hr>
+                <label for="">Rango</label><br><br>
+                <input type="range"><br><br><hr>
+                <label for="">Limpiar</label><br><br>
+                <input type="reset"><br><br><hr>
+                <label for="">Buscar</label><br><br>
+                <input type="search"><br><br><hr>
+                <label for="">Enviar</label><br><br>
+                <input type="submit"><br><br><hr>
+                <label for="">Telefono</label><br><br>
+                <input type="tel"><br><br><hr>
+                <label for="">Texto</label><br><br>
+                <input type="text"><br><br><hr>
+                <label for="">Hora</label><br><br>
+                <input type="time"><br><br><hr>
+                <label for="">URL</label><br><br>
+                <input type="url"><br><br><hr>
+            </form><br><br>
+            <h3>Textarea</h3>
+            <p> Es un elemento Un control de entrada de texto de varias líneas (área de texto):
+            </p><br>
+            <textarea id="w3review" name="w3review" rows="4" cols="50">
+                At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+            </textarea><br>
+            <h3>Select</h3>
+            <p> Un elemento que se utiliza para crear una lista desplegable con distintas opciones.
+            </p><br>       
+            <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select><br>
+        </article>
+    </section>
+</section>
+<footer>
+    <div class="container">
+        <div class="row1">      				
+        </div>
+        <div class="row">
+            <div class="text">
+                <p><span class="copyright">&copy; Todos los derechos Reservados | Jesus Toxqui Ortega </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
