@@ -1,0 +1,5 @@
+Conf\Conexion.class
+com\mycompany\JavaCRUD2\resources\JavaEE8Resource.class
+Dao\Usuario.class
+Dao\UsuarioBD.class
+com\mycompany\JavaCRUD2\JAXRSConfiguration.class
