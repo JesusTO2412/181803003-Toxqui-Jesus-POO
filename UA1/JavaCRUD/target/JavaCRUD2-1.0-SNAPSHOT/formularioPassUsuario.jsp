@@ -1,9 +1,3 @@
-<%-- 
-    Document   : formularioPassUsuario
-    Created on : 19 jun. 2020, 9:57:53
-    Author     : Jesus
---%>
-<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

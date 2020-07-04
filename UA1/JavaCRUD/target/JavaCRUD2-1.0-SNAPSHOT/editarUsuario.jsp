@@ -4,7 +4,7 @@
 <%  
     boolean querySuccess=true;
     UsuarioBD usuario = new UsuarioBD();
-    querySuccess=usuario.editarUsuario(new Usuario(Integer.parseInt(request.getParameter("idUsuario")),request.getParameter("usuario"), Integer.parseInt(request.getParameter("edad"))));  
+    querySuccess=usuario.actualizarUsuario(new Usuario(Integer.parseInt(request.getParameter("idUsuario")),request.getParameter("usuario"), Integer.parseInt(request.getParameter("edad"))));  
 %>
 <html>
     <head>

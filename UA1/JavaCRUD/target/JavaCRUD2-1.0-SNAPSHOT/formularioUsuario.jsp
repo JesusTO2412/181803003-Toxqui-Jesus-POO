@@ -1,43 +1,24 @@
-<%-- 
-    Document   : formularioUsuario
-    Created on : 12 jun. 2020, 8:48:12
-    Author     : Jesus
---%>
-
-<%@page import="java.sql.*"%>
+<%@page import="Dao.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%  
     int id;
-    String iduser="";
     String user="";
     String years="";
     String titulo="Agregar Usuario";
     String action = "agregarUsuario.jsp";
-    Connection conexion = null;
-    PreparedStatement stmt = null;
-    ResultSet rs = null;
     
     if(request.getParameter("id")!=null){
-        id = Integer.parseInt(request.getParameter("id"));
+
         titulo="Editar Usuario";
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios ?serverTimezone=UTC","root","");
-            stmt = conexion.prepareStatement("SELECT * FROM usuario WHERE id_usuario=?");
-            stmt.setInt(1, id);
-            rs=stmt.executeQuery(); 
-            
-            rs.next();
-            iduser = rs.getString("id_usuario");
-            user = rs.getString("usuario");
-            years = rs.getString("edad");
-            action = "editarUsuario.jsp";
-             
-            
-        }catch(SQLException e){
-            out.println("Error: "+e.getMessage());
-        }      
+        Usuario usuarioEd = new Usuario();
+        UsuarioBD usuario = new UsuarioBD();
+        usuarioEd=usuario.editarUsuario(new Usuario(Integer.parseInt(request.getParameter("id"))));
+        
+        user = usuarioEd.getUsuario();
+        years = ""+usuarioEd.getEdad();
+        action = "editarUsuario.jsp";
+
     }else {
         id=0;
     }
@@ -55,7 +36,7 @@
             <div class="form-group">             
                 <form class="form-signin" action="<%=action%>" method="GET">
                     <%if(request.getParameter("id")!=null){%>
-                        <input type="hidden" name="idUsuario" value="<%=id%>" />  
+                        <input type="hidden" name="idUsuario" value="<%=request.getParameter("id")%>" />  
                     <%}%>
                     <div class="text-center mb-4">
                         <img class="mb-4 rounded-circle" src="user.png" alt="" width="150">

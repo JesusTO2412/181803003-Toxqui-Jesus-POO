@@ -9,7 +9,8 @@ public class UsuarioBD {
     //Atributos SQL
     private static final String listado="SELECT * FROM usuario";
     private static final String insertado="INSERT INTO usuario SET usuario=?, password=md5(?), edad=?";
-    private static final String editado="UPDATE usuario SET usuario=?, edad=? WHERE id_usuario=?";
+    private static final String editado="SELECT * FROM usuario WHERE id_usuario=?";
+    private static final String editado2="UPDATE usuario SET usuario=?, edad=? WHERE id_usuario=?";
     private static final String editadoPass="SELECT id_usuario, password FROM usuario WHERE id_usuario=? and password=md5(?)";
     private static final String editadoPass2="UPDATE usuario SET password=md5(?) WHERE id_usuario=?";
     private static final String eliminado="SELECT * FROM usuario WHERE id_usuario=?";
@@ -44,8 +45,20 @@ public class UsuarioBD {
         }
     }
     
-     public boolean editarUsuario(Usuario usuario) throws SQLException {
+    public Usuario editarUsuario(Usuario usuario) throws SQLException {
+        Usuario usuarioEditado = new Usuario();
         stmt = conexion.prepareStatement(editado);
+        this.stmt.setInt(1, usuario.getId_usuario());
+        rs=this.stmt.executeQuery();
+        rs.next();
+        usuarioEditado.setUsuario(rs.getString("usuario"));
+        usuarioEditado.setEdad(rs.getInt("edad"));
+        
+        return usuarioEditado;      
+    }
+    
+    public boolean actualizarUsuario(Usuario usuario) throws SQLException {
+        stmt = conexion.prepareStatement(editado2);
         this.stmt.setString(1, usuario.getUsuario());
         this.stmt.setInt(2, usuario.getEdad());
         this.stmt.setInt(3, usuario.getId_usuario());

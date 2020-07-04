@@ -1,11 +1,3 @@
-<%-- 
-    Document   : eliminarUsuario
-    Created on : 19 jun. 2020, 22:49:51
-    Author     : Jesus
---%>
-<%@page import="Dao.Usuario"%>
-<%@page import="java.sql.*"%>
-<%@page import="Conf.Conexion"%>
 <%@page import="Dao.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
